@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>100以内末尾非3的数字之和</title>
+</head>
+<script>
+  let sum = 0;
+  for (let i = 1; i <= 100; i++) {
+    if ((i - 3) % 10 === 0) {
+      continue
+    }
+    sum += i;
+  }
+  alert(sum)
+</script>
+<body>
+
+</body>
+</html>

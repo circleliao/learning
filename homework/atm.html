@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATM</title>
+</head>
+<script>
+  var username = prompt("请输入用户名");
+  var rest = 0;
+
+  var i = prompt(
+          username +
+          "欢迎来到XX银行，请选择您要进行的操作\n 1 存钱 \n 2 取钱 \n 3 查询余额 \n 4 退出 \n "
+  );
+
+  do {
+    if (i == 1) {
+      var add = prompt(
+              username +
+              "您当前的余额为【" +
+              rest +
+              "】元，请输入存款金额"
+      );
+      rest += add-0;
+      alert( "您当前的余额为【" +
+              rest +
+              "】元")
+      i = prompt(
+              username +
+              "欢迎来到XX银行，请选择您要进行的操作\n 1 存钱 \n 2 取钱 \n 3 查询余额 \n 4 退出 \n "
+      );
+
+
+    }
+    if (i == 2) {
+      var less = prompt(
+              username +
+              "您当前的余额为【" +
+              rest +
+              "】元，请输入取款金额"
+      );
+      rest -= less;
+      alert( "您当前的余额为【" +
+              rest +
+              "】元")
+      i = prompt(
+              username +
+              "欢迎来到XX银行，请选择您要进行的操作\n 1 存钱 \n 2 取钱 \n 3 查询余额 \n 4 退出 \n "
+      );
+    }
+    if (i == 3) {
+      alert(
+              username +
+              "您当前的余额为【" +
+              rest +
+              "】元"
+      );
+      i = prompt(
+              username +
+              "欢迎来到XX银行，请选择您要进行的操作\n 1 存钱 \n 2 取钱 \n 3 查询余额 \n 4 退出 \n "
+      );
+
+    }
+    if (i == 4) {
+      continue;
+    }
+    if (i>4){
+      alert('请重新输入');
+      i = prompt(
+              username +
+              "欢迎来到XX银行，请选择您要进行的操作\n 1 存钱 \n 2 取钱 \n 3 查询余额 \n 4 退出 \n "
+      );
+    }
+  } while (i );
+</script>
+<body>
+
+</body>
+</html>
